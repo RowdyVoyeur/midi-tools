@@ -1,0 +1,86 @@
+{
+	"inputPortName": "FBV Shortboard Mk II 0",
+	"inputChannel": 1,
+	"outputPortName": "LoopBe Internal MIDI 2",
+	"outputChannel": 1,
+	"ccTranslationMap": {
+		"1": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 45, "velocity": 100}
+			]
+		},
+		"2": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 46, "velocity": 100}
+			]
+		},
+		"3": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 47, "velocity": 100}
+			]
+		},
+		"4": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 48, "velocity": 100}
+			]
+		},
+		"5": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 49, "velocity": 100}
+			]
+		},
+		"6": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 50, "velocity": 100}
+			]
+		},
+		"7": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 51, "velocity": 100}
+			]
+		},
+		"8": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 52, "velocity": 100}
+			]
+		},
+		"9": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 53, "velocity": 100}
+			]
+		},
+		"10": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 54, "velocity": 100}
+			]
+		},
+		"11": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 55, "velocity": 100}
+			]
+		},
+		"12": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 56, "velocity": 100}
+			]
+		},
+		"13": {
+			"shortFire": false,
+			"notes": [
+				{"pitch": 57, "velocity": 100}
+			]
+		}
+	}
+}
