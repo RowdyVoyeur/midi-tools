@@ -1,7 +1,7 @@
 import time
 import logging
 import sys
-from cctonote import Controller, Config, NoteSingle as NS, NoteBatch as NB
+from MidiCCToNote import Controller, Config, NoteSingle as NS, NoteBatch as NB
 import argparse
 
 # Args
