@@ -24,5 +24,3 @@
 126 F#-1 is [UP] 6
 
 127 G-1 is [DOWN] 7
-
-python /home/patch/midi-cc-to-note/main.py --config /home/patch/midi-cc-to-note/config.json &
