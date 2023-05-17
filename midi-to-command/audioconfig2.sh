@@ -27,11 +27,11 @@ fi
 
 sleep 1
 
-# Connect audio of USB Card Microphone to MC101
+# Connect audio of USB Card Microphone to MC101 In
 jack_connect system:capture_1 MC101_out:playback_1
 jack_connect system:capture_1 MC101_out:playback_2
 
-# Connect audio of MC101 Out to M8
+# Connect audio of MC101 Out to M8 In
 jack_connect MC101_in:capture_1 M8_out:playback_1
 jack_connect MC101_in:capture_2 M8_out:playback_2
 
