@@ -28,7 +28,9 @@ For some reason that I cannot identify, the ```outputChannel``` always sends MID
 def getMessage(self, on=True, channel=16): # Change the MIDI Output Channel here, in this case it's set to Channel 16
 ```
 
-Then, under ```ccTranslationMap``` you can specify the trigger ```Control Change``` values and the translated ```Pitch``` values and ```Velocity``` values. Here's an example capturing ```Control Change``` 120 and converting it to ```Pitch``` 4 (Note E-1) with a ```Velocity``` of 127:
+Then, under ```ccTranslationMap``` you can specify the trigger ```Control Change``` values and the translated ```Pitch``` values and ```Velocity``` values. You can also set ```shortFire``` to ```true``` if you want to send both Note On and Note Off messages or to ```false``` if you only want to send a Note Off message (and not send an additional Note On message immediately after the ```Control Change``` event).
+
+Here's an example capturing ```Control Change``` 120 and converting it to ```Pitch``` 4 (Note E-1) with a ```Velocity``` of 127:
 ```
 "120": {
                         "shortFire": false,
