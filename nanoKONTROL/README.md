@@ -1,16 +1,16 @@
 ## Audio Configurations
 
-1. Pitch 121, C#9 for mc101 -> m8 -> out
+Audio Config 1: Pitch 121, C#9 for MC101 -> M8 -> OUT
 
-2. Pitch 122, D9 for in -> mc101 -> m8 -> out
+Audio Config 2: Pitch 122, D9 for IN -> MC10 -> M8 -> OUT
 
-3. Pitch 124, E9 for m8 -> mc101 -> out
+Audio Config 3: Pitch 124, E9 for M8 -> MC10 -> OUT
 
-4. Pitch 125, F9 for in -> m8 -> mc101 -> out
+Audio Config 4: Pitch 125, F9 for IN -> M8 -> MC10 -> OUT
 
-5. Pitch 126, F#9 for m8+mc101 -> out
+Audio Config 5: Pitch 126, F#9 for M8+MC10 -> OUT
 
-6. Pitch 127, G9 for in -> m8+mc101 -> out
+Audio Config 6: Pitch 127, G9 for IN -> M8+MC10 -> OUT
 
 ## Keypad
 
