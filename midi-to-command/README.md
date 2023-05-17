@@ -82,7 +82,7 @@ optional arguments:
   -v, --verbose         verbose output
   ```  
 
-## Requirements
+## Requirements and Troubleshooting
 
 Both ```python-rtmidi``` and ```yaml``` are required to run the ```midi2command.py``` script.
 
