@@ -10,11 +10,6 @@ The original version of this tool can be found in the [examples](https://github.
 
 You just need to follow the instructions found [here](https://github.com/RowdyVoyeur/midi-tools/blob/main/README.md#installation).
 
-If you find any yaml related errors, you may need to update [pyyaml](https://yaml.org/spec/1.2.2/) to the latest version:
-```
-pip install --upgrade pyyaml
-```
-
 ## Configuration
 
 The script takes the name of the [configuration file](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/config.cfg) in [YAML]((https://yaml.org/spec/1.2.2/)) syntax as the first and only positional argument. The configuration consist of a list of mappings, where each mapping defines one command.
@@ -85,7 +80,21 @@ optional arguments:
   -p PORT, --port PORT  MIDI input port name or number (default: open virtual
                         input)
   -v, --verbose         verbose output
-  ```
+  ```  
+
+## Requirements
+
+Both ```python-rtmidi``` and ```yaml``` are required to run the ```midi2command.py``` script.
+
+If you find any rtmidi realted errors, please ensure it is installed by running:
+```
+sudo pip3 install rtmidi
+```
+
+If you find any yaml related errors, you may need to update [pyyaml](https://yaml.org/spec/1.2.2/):
+```
+pip install --upgrade pyyaml
+```
 
 ## References
 
