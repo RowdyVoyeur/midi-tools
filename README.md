@@ -90,12 +90,12 @@ Scene 4 allows to select the following audio routings:
 
 [A] is [MC101 -> M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig1.sh) - Pitch Value 121 (Note C#9)
 
-[B] is [IN -> MC10 -> M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) - Pitch Value 122 (Note D9)
+[B] is [IN -> MC101 -> M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) - Pitch Value 122 (Note D9)
 
-[C] is [M8 -> MC10 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) - Pitch Value 124 (Note E9)
+[C] is [M8 -> MC101 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) - Pitch Value 124 (Note E9)
 
-[D] is [IN -> M8 -> MC10 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig4.sh) - Pitch Value 125 (Note F9)
+[D] is [IN -> M8 -> MC101 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig4.sh) - Pitch Value 125 (Note F9)
 
-[E] is [M8+MC10 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) - Pitch Value 126 (Note F#9)
+[E] is [MC101 -> OUT | M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) - Pitch Value 126 (Note F#9)
 
-[F] is [IN -> M8+MC10 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) - Pitch 127 (Note G9)
+[F] is [IN -> MC101 -> OUT | IN -> M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) - Pitch 127 (Note G9)
