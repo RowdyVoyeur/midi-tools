@@ -27,7 +27,7 @@ fi
 
 sleep 1
 
-# Connect audio of M8 Out to M8
+# Connect audio of M8 Out to MC101 In
 jack_connect M8_in:capture_1 MC101_out:playback_1
 jack_connect M8_in:capture_2 MC101_out:playback_2
 
