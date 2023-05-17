@@ -5,18 +5,18 @@ This is a set of MIDI tools to use with [M8C running on a Raspberry Pi with Patc
 
 ## nanoKONTROL
 
-Controls
+# Controls
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/1.jpg" width="500">
 
-Mute and Solo
+# Mute and Solo
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/2.jpg" width="500">
 
-Notes
+# Notes
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/3.jpg" width="500">
 
-Audio Routing
+# Audio Routing
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/4.jpg" width="500">
