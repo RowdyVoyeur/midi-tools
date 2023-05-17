@@ -28,7 +28,6 @@ sudo python home/patch/midi-tools/midi-to-command/midi2command.py home/patch/mid
 
 fi
 
-
 # Open audio interface between M8 Out and System In
 alsa_in -j "M8_in" -d hw:CARD=M8,DEV=0 &
 
