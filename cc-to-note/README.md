@@ -18,6 +18,7 @@ You should use this [configuration file](https://github.com/RowdyVoyeur/midi-too
 - inputChannel
 - outputPortName
 - outputChannel
+- ccTranslationMap
 
 The value of ```inputChannel``` and ```outputChannel``` must be an integer. The ```inputPortName``` and ```outputPortName``` should be the port name, which can be found using ``` aconnect -l```.
 
@@ -27,7 +28,7 @@ For some reason that I cannot identify, the ```outputChannel``` always sends MID
 def getMessage(self, on=True, channel=16): # Change the MIDI Output Channel here, in this case it's set to Channel 16
 ```
 
-You can then specify the incoming ```Control Change``` value, the output ```Pitch``` value and ```Velocity``` value. Here's an example capturing ```Control Change``` 120 and converting it to ```Pitch``` 4 (Note E-1) with a ```Velocity``` of 127:
+Then, under ```ccTranslationMap``` you can specify the trigger ```Control Change``` values and the translated ```Pitch``` values and ```Velocity``` values. Here's an example capturing ```Control Change``` 120 and converting it to ```Pitch``` 4 (Note E-1) with a ```Velocity``` of 127:
 ```
 "120": {
                         "shortFire": false,
