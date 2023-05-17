@@ -95,7 +95,3 @@ If you find any yaml related errors, you may need to update [pyyaml](https://yam
 ```
 pip install --upgrade pyyaml
 ```
-
-## References
-
-[Full details about midi2command](https://github.com/SpotlightKid/python-rtmidi/tree/master/examples/midi2command)
