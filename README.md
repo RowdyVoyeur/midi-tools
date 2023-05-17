@@ -83,7 +83,7 @@ Scene 2 allows to individually control the Mute and Solo of Channels 1 to 8 of t
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/3.jpg" width="500">
 
-Scene 3 allows sending MIDI Notes from nanoKONTROL keys [A] to [O].
+Scene 3 allows sending MIDI Notes from nanoKONTROL keys [A] to [O], basically acting as a chromatic MIDI keyboard.
 
 
 ### Audio Routing
