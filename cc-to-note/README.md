@@ -61,8 +61,3 @@ If you find any rtmidi related errors, please ensure it is installed by running:
 sudo pip3 install rtmidi
 ```
 
-## References
-
-[Full details about midi-cc-to-note](https://github.com/sherbocopter/midi-cc-to-note)
-
-[MIDI pitch values](https://jythonmusic.me/api/midi-constants/pitch)
