@@ -24,14 +24,14 @@ The original version of this tool can be found in the [examples](https://github.
 
 ## Installation
 
-To install these tools simply clone them using:
+To install these tools simply clone using:
 
 ```
 cd
 git clone https://github.com/RowdyVoyeur/midi-tools.git
 ```
 
-As mentioned above, these tools were created to use with [Patchbox OS](https://blokas.io/patchbox-os). As such, it should not be necessary to install rtmidi because it's already part of the OS.
+It shouldn't be necessary to install ```rtmidi``` because it's already part of [Patchbox OS](https://blokas.io/patchbox-os).
 
 ## Configuration
 
