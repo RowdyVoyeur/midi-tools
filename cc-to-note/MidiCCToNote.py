@@ -51,8 +51,11 @@ class NoteSingle(object):
 
 		return cls(pitch, velocity)
 
-	def getMessage(self, on=True):
-		return [0x90 if on else 0x80, self.pitch, self.velocity]
+	def getMessage(self, on=True, channel=16): # Change the output MIDI channel here
+		statusByte = 0x90 if on else 0x80
+		statusByte |= (channel - 1)  # Subtract 1 from channel to get the correct MIDI channel
+
+		return [statusByte, self.pitch, self.velocity]
 
 class NoteBatch(object):
 	def __init__(self, notes, shortFire=False):
