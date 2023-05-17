@@ -1,3 +1,4 @@
+{
         "inputPortName": "nanoKONTROL",
         "inputChannel": 15,
         "outputPortName": "M8",
@@ -28,3 +29,4 @@
                         ]
                 }
         }
+}
