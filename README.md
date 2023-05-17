@@ -16,15 +16,11 @@ The [CC To Note](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note)
 
 This tool is basically a customised version of [sherbocopter's](https://github.com/sherbocopter/midi-cc-to-note) script [midi-cc-to-note](https://github.com/sherbocopter/midi-cc-to-note), whith some minor changes to fit my needs. Therefore, I would like to thank [sherbocopter](https://github.com/sherbocopter) for the phenomenal work.
 
-You can find more details about this tool [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note).
-
 ### MIDI To Command
 
 The [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command) tool also uses [python-rtmidi](https://spotlightkid.github.io/python-rtmidi) to capture MIDI Note messages sent on a specific MIDI Channel and convert them into actions or commands that can perform whatever you wish.
 
 The original version of this tool can be found in the [examples](https://github.com/SpotlightKid/python-rtmidi/tree/master/examples) of the [python-rtmidi](https://github.com/SpotlightKid/python-rtmidi). I simply configured it and created the scripts to perform the required commands. Thank you very much [SpotlightKid](https://github.com/SpotlightKid) for the amazing repository.
-
-You can find more details about this tool [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command).
 
 ## Installation
 
