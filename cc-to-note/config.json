@@ -1,6 +1,6 @@
 {
         "inputPortName": "nanoKONTROL",
-        "inputChannel": 15,
+        "inputChannel": 16,
         "outputPortName": "M8",
         "outputChannel": 16,
         "ccTranslationMap": {
