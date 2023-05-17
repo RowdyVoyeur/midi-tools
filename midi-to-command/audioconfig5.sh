@@ -27,8 +27,10 @@ fi
 
 sleep 1
 
-# Connect the required ports
+# Connect audio of MC101 Out to System In
 jack_connect MC101_in:capture_1 system:playback_1
 jack_connect MC101_in:capture_2 system:playback_2
+
+# Connect audio of M8 Out to System In
 jack_connect M8_in:capture_1 system:playback_1
 jack_connect M8_in:capture_2 system:playback_2
