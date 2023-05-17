@@ -47,7 +47,7 @@ Specific information about the configuration of each tool can be found [here](ht
 
 This section shows the layout of the various nanoKONTROL scenes. This assumes you are using the nanoKONTROL set file found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/nanoKONTROL).
 
-### Controller
+### Gamepad Controller
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/1.jpg" width="500">
 
@@ -69,7 +69,7 @@ Scene 1 allows to control the M8 with the following keys of the nanoKONTROL:
 
 [↓] is Down - CC Value 127 converted to Pitch Value 7 (Note G-1)
 
-### Mute and Solo
+### Mixer, Mute and Solo
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/2.jpg" width="500">
 
@@ -79,7 +79,7 @@ Scene 2 allows to individually control the Mute and Solo of Channels 1 to 8 of t
 
 [S] is Solo Channels 1 to 8 - Picth Values 20 to 27 (Notes G#0 to D#1)
 
-### Notes
+### Chromatic Keyboard
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/3.jpg" width="500">
 
