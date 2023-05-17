@@ -49,7 +49,7 @@ Alternatively, you can also use ```--debug``` to see what is happening:
 sudo python main.py --config config.json --debug
 ```
 
-## Requirements
+## Requirements and Troubleshooting
 
 The ```python-rtmidi``` is required to run the ```MidiCCToNote.py``` script.
 
