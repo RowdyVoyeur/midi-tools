@@ -21,13 +21,13 @@ You should use this [configuration file](https://github.com/RowdyVoyeur/midi-too
 
 The value of ```inputChannel``` and ```outputChannel``` may be a single integer. The ```inputPortName``` and ```outputPortName``` should be the port name, which can be found using ``` aconnect -l```.
 
-Please note that, as far as I can tell, the ```outputChannel``` is not working properly. So, in order to select the ```outputChannel```, I manually edited the [MidiCCToNote.py](https://github.com/RowdyVoyeur/midi-tools/blob/main/cc-to-note/MidiCCToNote.py) and changed the following:
+For some reason that I cannot identify, the ```outputChannel``` always sends MIDI data to Channel 1 regardless of the selected output Channel. So, in order to select the ```outputChannel```, I manually edited the [MidiCCToNote.py](https://github.com/RowdyVoyeur/midi-tools/blob/main/cc-to-note/MidiCCToNote.py) and changed the following:
 
 ```
-def getMessage(self, on=True, channel=16): # Change the output MIDI channel here, in this case it's channel 16
+def getMessage(self, on=True, channel=16): # Change the MIDI Output Channel here, in this case it's set to Channel 16
 ```
 
-You can then specify the incoming ```Control Change``` value, the output ```Pitch``` value and ```Velocity``` value. Here's an example capturing ```Control Change``` 120 and converting it to ```Pitch``` 4 (E-1) with a ```Velocity``` of 127:
+You can then specify the incoming ```Control Change``` value, the output ```Pitch``` value and ```Velocity``` value. Here's an example capturing ```Control Change``` 120 and converting it to ```Pitch``` 4 (Note E-1) with a ```Velocity``` of 127:
 ```
 "120": {
                         "shortFire": false,
