@@ -86,7 +86,7 @@ optional arguments:
 
 Both ```python-rtmidi``` and ```yaml``` are required to run the ```midi2command.py``` script.
 
-If you find any rtmidi realted errors, please ensure it is installed by running:
+If you find any rtmidi related errors, please ensure it is installed by running:
 ```
 sudo pip3 install rtmidi
 ```
