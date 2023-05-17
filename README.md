@@ -51,14 +51,54 @@ This section shows the layout of the various nanoKONTROL scenes. This assumes yo
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/1.jpg" width="500">
 
+Scene 1 allows to control the M8 with the following keys of the nanoKONTROL:
+
+[P] is Play - Pitch Value 0 (Note C-1)
+
+[S] is Shift - Pitch Value 1 (Note C#-1)
+
+[E] is Edit - Pitch Value 2 (Note D-1)
+
+[O] is Option - Pitch Value 3 (Note D#-1)
+
+[←] is Left - CC Value 124 converted to Pitch Value 4 (Note E-1)
+
+[→] is Right - CC Value 125 converted to Pitch Value 5 (Note F-1)
+
+[↑] is Up - CC Value 126 converted to Pitch Value 6 (Note F#-1)
+
+[↓] is Down - CC Value 127 converted to Pitch Value 7 (Note G-1)
+
 ### Mute and Solo
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/2.jpg" width="500">
+
+Scene 2 allows to individually control the Mute and Solo of Channels 1 to 8 of the M8 with the following keys of the nanoKONTROL:
+
+[M] is Mute Channels 1 to 8 - Notes C0 to G0
+
+[S] is Solo Channels 1 to 8 - Notes G#0 to D#1
 
 ### Notes
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/3.jpg" width="500">
 
+Scene 3 allows sending MIDI Notes from nanoKONTROL keys A to O.
+
 ### Audio Routing
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/4.jpg" width="500">
+
+Scene 4 allows to select the following audio routings:
+
+[A] is [MC101 -> M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig1.sh) - Pitch Value 121 (Note C#9)
+
+[B] is [IN -> MC10 -> M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) - Pitch Value 122 (Note D9)
+
+[C] is [M8 -> MC10 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) - Pitch Value 124 (Note E9)
+
+[D] is [IN -> M8 -> MC10 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig4.sh) - Pitch Value 125 (Note F9)
+
+[E] is [M8+MC10 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) - Pitch Value 126 (Note F#9)
+
+[F] is [IN -> M8+MC10 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) - Pitch 127 (Note G9)
