@@ -75,15 +75,16 @@ Scene 1 allows to control the M8 with the following keys of the nanoKONTROL:
 
 Scene 2 allows to individually control the Mute and Solo of Channels 1 to 8 of the M8 with the following keys of the nanoKONTROL:
 
-[M] is Mute Channels 1 to 8 - Notes C0 to G0
+[M] is Mute Channels 1 to 8 - Picth Values 12 to 19 (Notes C0 to G0)
 
-[S] is Solo Channels 1 to 8 - Notes G#0 to D#1
+[S] is Solo Channels 1 to 8 - Picth Values 20 to 27 (Notes G#0 to D#1)
 
 ### Notes
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/3.jpg" width="500">
 
-Scene 3 allows sending MIDI Notes from nanoKONTROL keys A to O.
+Scene 3 allows sending MIDI Notes from nanoKONTROL keys [A] to [O].
+
 
 ### Audio Routing
 
