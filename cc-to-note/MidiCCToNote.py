@@ -35,7 +35,7 @@ class _MidiTranslateHandler(object):
 	def _extractChannel(self, statusByte):
 		channel = statusByte ^ 176
 		if (channel > 15):
-			LOG.DEBUG('Not a CC. Ignoring')
+			LOG.debug('Not a CC. Ignoring.')
 		else:
 			return channel + 1
 
