@@ -98,4 +98,4 @@ Scene 4 allows to select the following audio routings:
 
 [E] is [MC101 -> OUT | M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) - Pitch Value 126 (Note F#9)
 
-[F] is [IN -> MC101 -> OUT | IN -> M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) - Pitch 127 (Note G9)
+[F] is [IN -> MC101 -> OUT | IN -> M8 -> OUT (Default)](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) - Pitch 127 (Note G9)
