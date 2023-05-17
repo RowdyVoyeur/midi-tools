@@ -70,7 +70,7 @@ If no port is specified, ```midi2command.py``` opens a virtual MIDI input port.
 
 Here's the full synopsis of the available commands:
 ```
-usage: midi2command.py [-h] [-b {alsa,coremidi,jack,windowsmm}] [-p PORT] [-v]
+usage: midi2command.py [-h] [-b {alsa,jack}] [-p PORT] [-v]
                        CONFIG
 
 Execute external commands when specific MIDI messages are received.
@@ -80,7 +80,7 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  -b {alsa,coremidi,jack,windowsmm}, --backend {alsa,coremidi,jack,windowsmm}
+  -b {alsa,jack}, --backend {alsa,jack}
                         MIDI backend API (default: OS dependant)
   -p PORT, --port PORT  MIDI input port name or number (default: open virtual
                         input)
