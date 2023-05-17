@@ -19,7 +19,7 @@ You should use this [configuration file](https://github.com/RowdyVoyeur/midi-too
 - outputPortName
 - outputChannel
 
-The value of ```inputChannel``` and ```outputChannel``` may be a single integer. The ```inputPortName``` and ```outputPortName``` should be the port name, which can be found using ``` aconnect -l```.
+The value of ```inputChannel``` and ```outputChannel``` must be an integer. The ```inputPortName``` and ```outputPortName``` should be the port name, which can be found using ``` aconnect -l```.
 
 For some reason that I cannot identify, the ```outputChannel``` always sends MIDI data to Channel 1 regardless of the selected output Channel. So, in order to select the ```outputChannel```, I manually edited the [MidiCCToNote.py](https://github.com/RowdyVoyeur/midi-tools/blob/main/cc-to-note/MidiCCToNote.py) and changed the following:
 
