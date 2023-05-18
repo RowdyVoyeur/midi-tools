@@ -8,11 +8,11 @@ else
   echo "MC101 detected, connecting."
 
 # Open audio interface between the Instrument Out and System In
-# Options: -r is Sample Rate, -p is Period or Buffer Size, -n is Period
-alsa_in -j "MC101_in" -d hw:CARD=MC101,DEV=0 -r 44100 -p 65 -n 4 &
+# Options: -r is Sample Rate, -p is Period or Buffer Size, -n is Period, -q is Quality
+alsa_in -j "MC101_in" -d hw:CARD=MC101,DEV=0 -r 44100 -p 65 -n 4 -q 4 &
 
 # Open audio interface between System Out and Instrument In
-alsa_out -j "MC101_out" -d hw:CARD=MC101,DEV=0 -r 44100 -p 65 -n 4 &
+alsa_out -j "MC101_out" -d hw:CARD=MC101,DEV=0 -r 44100 -p 65 -n 4 -q 4 &
 
 sleep 2
 
@@ -24,16 +24,16 @@ jack_connect MC101_in:capture_2 system:playback_2
 jack_connect system:capture_1 MC101_out:playback_1
 jack_connect system:capture_1 MC101_out:playback_2
 
-# Start MIDI To Command
-sudo python home/patch/midi-tools/midi-to-command/midi2command.py home/patch/midi-tools/midi-to-command/config.cfg -p nanoKONTROL &
+# Start MIDI To Command (Uncomment the following line to start midi-to-command on boot)
+# sudo python home/patch/midi-tools/midi-to-command/midi2command.py home/patch/midi-tools/midi-to-command/config.cfg -p nanoKONTROL &
 
 fi
 
 # Open audio interface between M8 Out and System In
-alsa_in -j "M8_in" -d hw:CARD=M8,DEV=0 -r 44100 -p 65 -n 4 &
+alsa_in -j "M8_in" -d hw:CARD=M8,DEV=0 -r 44100 -p 65 -n 4 -q 4 &
 
 # Open audio interface between System Out and M8 In
-alsa_out -j "M8_out" -d hw:CARD=M8,DEV=0 -r 44100 -p 65 -n 4 &
+alsa_out -j "M8_out" -d hw:CARD=M8,DEV=0 -r 44100 -p 65 -n 4 -q 4 &
 
 sleep 2
 
@@ -46,8 +46,8 @@ jack_connect M8_in:capture_2 system:playback_2
 jack_connect system:capture_1 M8_out:playback_1
 jack_connect system:capture_1 M8_out:playback_2
 
-# Start CC to Note
-sudo python /home/patch/midi-tools/cc-to-note/main.py --config /home/patch/midi-tools/cc-to-note/config.json &
+# Start CC to Note (Uncomment the following line to start cc-to-note on boot)
+# sudo python /home/patch/midi-tools/cc-to-note/main.py --config /home/patch/midi-tools/cc-to-note/config.json &
 
 # Start M8C
 pushd /home/patch/m8c-rpi4
