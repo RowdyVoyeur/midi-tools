@@ -13,17 +13,17 @@ The script takes the name of the [configuration file](https://github.com/RowdyVo
 Here is a configuration defining two commands. The description of each command explains what it does:
 ```
 - name: Audio Config 1
-  description: Connects MC101 to M8, then M8 to System Playback
-    when noteon 121 or C#9 is received on channel 14
+  description: Connects MC101 to M8 then M8 to System Playback
+    when noteon 121 or CS9 is received on Channel 15
   status: noteon
-  channel: 14
+  channel: 15
   data: 121
   command: su patch -c /home/patch/midi-tools/midi-to-command/audioconfig1.sh
 - name: Audio Config 2
-  description: Connects Audio Input to MC101, then MC101 to M8, then M8 to System Playback
-    when noteon 122 or D9 is received on channel 14
-  status: controllerchange
-  channel: 14
+  description: Connects Audio Input to MC101 then MC101 to M8 then M8 to System Playback
+    when noteon 122 or D9 is received on Channel 15
+  status: noteon
+  channel: 15
   data: 122
   command: su patch -c /home/patch/midi-tools/midi-to-command/audioconfig2.sh
 ```
