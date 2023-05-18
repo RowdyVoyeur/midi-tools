@@ -31,20 +31,23 @@ cd
 git clone https://github.com/RowdyVoyeur/midi-tools.git
 ```
 
-The [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command) uses custom shell scripts. Therefore, you need to make them executable by everyone:
+The [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command) uses custom shell scripts. Therefore, you need to get into the ```midi-to-command``` directory:
 
 ```
 cd midi-tools/midi-to-command
+```
+
+And make all scripts executable by everyone:
+
+```
 chmod a+x *.sh
 ```
 
-It shouldn't be necessary to install ```rtmidi``` because it's already part of [Patchbox OS](https://blokas.io/patchbox-os). If you have ```rtmidi``` or ```yaml``` related errors, please check the Requirements and Troubleshooting section of each tool.
+You can use several methods such as ```systemd``` or ```crontab``` to automatically start these tools on boot. However, if you are using the [M8C Module for Patchbox OS](https://github.com/RowdyVoyeur/m8c-rpi4-module) you can simply edit [m8c.sh](https://github.com/RowdyVoyeur/m8c-rpi4/blob/main/m8c.sh) and include the additional lines of code found in this [example](https://github.com/RowdyVoyeur/midi-tools/blob/main/m8c-example.sh).
 
-## Configuration
+It shouldn't be necessary to install ```rtmidi``` because it's already part of [Patchbox OS](https://blokas.io/patchbox-os). If you have ```rtmidi``` or ```yaml``` related errors, please check the Requirements section of each tool.
 
-To automatically start these tools on boot, you should edit [m8c.sh](https://github.com/RowdyVoyeur/m8c-rpi4/blob/main/m8c.sh) to include the additional lines of code found in this [example](https://github.com/RowdyVoyeur/midi-tools/blob/main/m8c-example.sh).
-
-Specific information about the configuration of each tool can be found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note) for CC To Note and [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command) for MIDI To Command.
+Specific information about the configuration of each tool can be found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#configuration) for CC To Note and [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#configuration) for MIDI To Command.
 
 ## nanoKONTROL
 
@@ -54,7 +57,7 @@ This section shows the layout of the various nanoKONTROL scenes. This assumes yo
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/1.jpg" width="500">
 
-Scene 1 allows to control the M8 with the following nanoKONTROL buttons, which send MIDI data on Channel 16:
+Scene 1 allows to control the M8 with the following nanoKONTROL buttons (MIDI Channel 16):
 
 [P] - Play (Pitch 0, Note C-1)
 
@@ -76,7 +79,7 @@ Scene 1 allows to control the M8 with the following nanoKONTROL buttons, which s
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/2.jpg" width="500">
 
-Scene 2 allows to individually control the Mute and Solo of Channels 1 to 8 of the M8 with the following buttons of the nanoKONTROL, which send MIDI data on Channel 16:
+Scene 2 allows to individually control the Mute and Solo of Channels 1 to 8 of the M8 with the following buttons of the nanoKONTROL (MIDI Channel 16):
 
 [M] - Mute Channels 1 to 8 (Pitch 12 to 19, Notes C0 to G0)
 
@@ -86,7 +89,7 @@ Scene 2 allows to individually control the Mute and Solo of Channels 1 to 8 of t
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/3.jpg" width="500">
 
-Scene 3 is a chromatic keyboard that sends the following MIDI Notes on Channel 12:
+Scene 3 is a chromatic keyboard that sends MIDI Notes from the following nanoKONTROL buttons (MIDI Channel 12):
 
 [A] to [O] - Notes C-1 to D0
 
@@ -94,20 +97,20 @@ Scene 3 is a chromatic keyboard that sends the following MIDI Notes on Channel 1
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/4.jpg" width="500">
 
-Scene 4 allows to select different audio routings by pressing the following nanoKONTROL buttons, which send MIDI data on Channel 14:
+Scene 4 allows to select different audio routings by pressing the following nanoKONTROL buttons (MIDI Channel 15):
 
-[A] - [MC101 -> M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig1.sh) (Pitch 121, Note C#9)
+[A] - [MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig1.sh) (Pitch 121, Note C#9)
 
-[B] - [IN -> MC101 -> M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) (Pitch 122, Note D9)
+[B] - [IN->MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) (Pitch 122, Note D9)
 
-[C] - [M8 -> MC101 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) (Pitch 124, Note E9)
+[C] - [M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) (Pitch 124, Note E9)
 
-[D] - [IN -> M8 -> MC101 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig4.sh) (Pitch 125, Note F9)
+[D] - [IN->M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig4.sh) (Pitch 125, Note F9)
 
-[E] - [MC101 -> OUT | M8 -> OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) (Pitch 126, Note F#9)
+[E] - [MC101->OUT | M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) (Pitch 126, Note F#9)
 
-[F] - [IN -> MC101 -> OUT | IN -> M8 -> OUT (Default)](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) (Pitch 127, Note G9)
+[F] - [IN->MC101->OUT | IN->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) (Pitch 127, Note G9)
 
 ## References
 
-[MIDI Notes to Pitch Values](https://jythonmusic.me/api/midi-constants/pitch)
+[Convert MIDI Notes to Pitch Values](https://jythonmusic.me/api/midi-constants/pitch)
