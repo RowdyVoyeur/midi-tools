@@ -8,10 +8,11 @@ else
   echo "MC101 detected, connecting."
 
 # Open audio interface between the Instrument Out and System In
-alsa_in -j "MC101_in" -d hw:CARD=MC101,DEV=0 &
+# Options: -r is Sample Rate, -p is Period or Buffer Size, -n is Period
+alsa_in -j "MC101_in" -d hw:CARD=MC101,DEV=0 -r 44100 -p 65 -n 4 &
 
 # Open audio interface between System Out and Instrument In
-alsa_out -j "MC101_out" -d hw:CARD=MC101,DEV=0 &
+alsa_out -j "MC101_out" -d hw:CARD=MC101,DEV=0 -r 44100 -p 65 -n 4 &
 
 sleep 2
 
@@ -29,10 +30,10 @@ sudo python home/patch/midi-tools/midi-to-command/midi2command.py home/patch/mid
 fi
 
 # Open audio interface between M8 Out and System In
-alsa_in -j "M8_in" -d hw:CARD=M8,DEV=0 &
+alsa_in -j "M8_in" -d hw:CARD=M8,DEV=0 -r 44100 -p 65 -n 4 &
 
 # Open audio interface between System Out and M8 In
-alsa_out -j "M8_out" -d hw:CARD=M8,DEV=0 &
+alsa_out -j "M8_out" -d hw:CARD=M8,DEV=0 -r 44100 -p 65 -n 4 &
 
 sleep 2
 
