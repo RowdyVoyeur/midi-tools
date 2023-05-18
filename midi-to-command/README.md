@@ -6,10 +6,6 @@ The ```midi2command.py``` script uses ```python-rtmidi``` to capture MIDI messag
 
 The original version of this tool can be found in the [examples](https://github.com/SpotlightKid/python-rtmidi/tree/master/examples) of the [python-rtmidi](https://github.com/SpotlightKid/python-rtmidi). I simply configured it and created the additional scripts to perform the required commands. Thank you very much [SpotlightKid](https://github.com/SpotlightKid) for the amazing repository.
 
-## Installation
-
-You just need to follow the instructions found [here](https://github.com/RowdyVoyeur/midi-tools/blob/main/README.md#installation).
-
 ## Configuration
 
 The script takes the name of the [configuration file](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/config.cfg) in [YAML]((https://yaml.org/spec/1.2.2/)) syntax as the first and only positional argument. The configuration consist of a list of mappings, where each mapping defines one command.
