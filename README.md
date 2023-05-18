@@ -31,7 +31,7 @@ cd
 git clone https://github.com/RowdyVoyeur/midi-tools.git
 ```
 
-The [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command) uses custom shell scripts. Therefore, you need to get into the ```midi-to-command``` directory:
+The [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command) uses custom shell scripts. Therefore, you need to get into the `midi-to-command` directory:
 
 ```
 cd midi-tools/midi-to-command
@@ -43,9 +43,9 @@ And make all scripts executable by everyone:
 chmod a+x *.sh
 ```
 
-You can use several methods such as ```systemd``` or ```crontab``` to automatically start these tools on boot. However, if you are using the [M8C Module for Patchbox OS](https://github.com/RowdyVoyeur/m8c-rpi4-module) you can simply edit [m8c.sh](https://github.com/RowdyVoyeur/m8c-rpi4/blob/main/m8c.sh) and include the additional lines of code found in this [example](https://github.com/RowdyVoyeur/midi-tools/blob/main/m8c-example.sh).
+You can use several methods such as `systemd` or `crontab` to automatically start these tools on boot. However, if you are using the [M8C Module for Patchbox OS](https://github.com/RowdyVoyeur/m8c-rpi4-module) you can simply edit [m8c.sh](https://github.com/RowdyVoyeur/m8c-rpi4/blob/main/m8c.sh) and include the additional lines of code found in this [example](https://github.com/RowdyVoyeur/midi-tools/blob/main/m8c-example.sh).
 
-It shouldn't be necessary to install ```rtmidi``` because it's already part of [Patchbox OS](https://blokas.io/patchbox-os). If you have ```rtmidi``` or ```yaml``` related errors, please check the Requirements section of each tool.
+It shouldn't be necessary to install `rtmidi` because it's already part of [Patchbox OS](https://blokas.io/patchbox-os). If you have `rtmidi` or `yaml` related errors, please check the Requirements section of each tool.
 
 Specific information about the configuration of each tool can be found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#configuration) for CC To Note and [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#configuration) for MIDI To Command.
 
@@ -99,7 +99,7 @@ Scene 3 is a chromatic keyboard that sends MIDI Notes from the following nanoKON
 
 Scene 4 allows to select different audio routings by pressing the following nanoKONTROL buttons (MIDI Channel 15):
 
-[A] - [MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig1.sh) (Pitch 121, Note C#9)
+[A] - [MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig1.sh) <sup>(Pitch 121, Note C#9)</sup>
 
 [B] - [IN->MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) (Pitch 122, Note D9)
 
