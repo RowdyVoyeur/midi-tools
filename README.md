@@ -43,7 +43,7 @@ And make all scripts executable by everyone:
 chmod a+x *.sh
 ```
 
-You can use several methods such as `systemd` or `crontab` to automatically start these tools on boot. However, if you are using the [M8C Module for Patchbox OS](https://github.com/RowdyVoyeur/m8c-rpi4-module) you can simply edit [m8c.sh](https://github.com/RowdyVoyeur/m8c-rpi4/blob/main/m8c.sh) and include the additional lines of code found in this [example](https://github.com/RowdyVoyeur/midi-tools/blob/main/m8c-example.sh).
+You can use several methods such as `systemd` or `crontab` to automatically start these tools on boot. However, if you are using the [M8C Module for Patchbox OS](https://github.com/RowdyVoyeur/m8c-rpi4-module) you can simply customise the [m8c.sh](https://github.com/RowdyVoyeur/m8c-rpi4/blob/main/m8c.sh) script and uncomment the relevant lines.
 
 It shouldn't be necessary to install `rtmidi` because it's already part of [Patchbox OS](https://blokas.io/patchbox-os). If you have `rtmidi` or `yaml` related errors, please check the Requirements section of each tool.
 
