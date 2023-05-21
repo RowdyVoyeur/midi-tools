@@ -89,5 +89,9 @@ sudo pip3 install rtmidi
 
 If you find any `yaml` related errors, you may need to update [pyyaml](https://yaml.org/spec/1.2.2/):
 ```
-pip install --upgrade pyyaml
+sudo apt install python3-pip
+```
+Followed by:
+```
+sudo pip3 install pyyaml
 ```
