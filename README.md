@@ -24,30 +24,52 @@ The original version of this tool can be found in the [examples](https://github.
 
 ## Installation
 
-To install these tools simply clone using:
+1. To install these tools simply clone using:
 
 ```
 cd
 git clone https://github.com/RowdyVoyeur/midi-tools.git
 ```
 
-The [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command) uses custom shell scripts. Therefore, you need to get into the `midi-to-command` directory:
+2. The [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command) uses custom shell scripts. Therefore, you need to get into the `midi-to-command` directory:
 
 ```
 cd midi-tools/midi-to-command
 ```
 
-And make all scripts executable by everyone:
+3. And make all scripts executable by everyone:
 
 ```
 chmod a+x *.sh
 ```
 
-You can use several methods such as `systemd` or `crontab` to automatically start these tools on boot. However, if you are using the [M8C Module for Patchbox OS](https://github.com/RowdyVoyeur/m8c-rpi4-module) you can simply customise the [m8c.sh](https://github.com/RowdyVoyeur/m8c-rpi4/blob/main/m8c.sh) script and uncomment the relevant lines.
+4. It shouldn't be necessary to install `rtmidi` because it's already part of [Patchbox OS](https://blokas.io/patchbox-os). However, you will need to install [pyyaml](https://yaml.org/spec/1.2.2/). Start by installing pip:
+```
+sudo apt install python3-pip
+```
 
-It shouldn't be necessary to install `rtmidi` because it's already part of [Patchbox OS](https://blokas.io/patchbox-os). If you have `rtmidi` or `yaml` related errors, please check the Requirements section of each tool.
+5. And then, install pyyaml:
+```
+sudo pip3 install pyyaml
+```
 
-Specific information about the configuration of each tool can be found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#configuration) for CC To Note and [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#configuration) for MIDI To Command.
+6. Once the steps above are done, you should test the scripts before automatically start them on boot. Run the following to run and test `midi-to-command`:
+```
+cd
+sudo python midi-tools/midi-to-command/midi2command.py midi-tools/midi-to-command/config.cfg -p nanoKONTROL
+```
+
+7. And the following to run and test `cc-to-note`:
+```
+cd
+sudo python midi-tools/cc-to-note/main.py --config midi-tools/cc-to-note/config.json
+```
+
+8. If you did not find any errors, you can configure how you would like these tools to automatically start on boot.
+
+9. You can use several methods such as `systemd` or `crontab` to automatically start these tools on boot. However, if you are using the [M8C Module for Patchbox OS](https://github.com/RowdyVoyeur/m8c-rpi4-module) you can simply customise the [m8c.sh](https://github.com/RowdyVoyeur/m8c-rpi4/blob/main/m8c.sh) script and uncomment the relevant lines.
+
+10. Specific information about the configuration of each tool can be found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#configuration) for CC To Note and [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#configuration) for MIDI To Command.
 
 ## nanoKONTROL
 
