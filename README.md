@@ -53,13 +53,13 @@ sudo apt install python3-pip
 sudo pip3 install pyyaml
 ```
 
-6. Once the steps above are done, you should test the scripts before automatically start them on boot. Run the following to run and test `midi-to-command`:
+6. Once the steps above are done, you should test the scripts before automatically start them on boot. Connect the MIDI device(s), reboot and run the following to test `midi-to-command`:
 ```
 cd
 sudo python midi-tools/midi-to-command/midi2command.py midi-tools/midi-to-command/config.cfg -p nanoKONTROL
 ```
 
-7. And the following to run and test `cc-to-note`:
+7. And run the following to test `cc-to-note`:
 ```
 cd
 sudo python midi-tools/cc-to-note/main.py --config midi-tools/cc-to-note/config.json
