@@ -101,11 +101,11 @@ Scene 1 allows to control the M8 with the following nanoKONTROL buttons <sup>(Ch
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/2.jpg" width="500">
 
-Scene 2 allows to individually control the Mute and Solo of Channels 1 to 8 of the M8 with the following buttons of the nanoKONTROL <sup>(Channel 16)</sup>:
+Scene 2 allows to individually control the Mute and Solo of Tracks 1 to 8 of the M8 with the following buttons of the nanoKONTROL <sup>(Channel 16)</sup>:
 
-[M] - Mute Channels 1 to 8 <sup>(Pitch 12 to 19, Notes C0 to G0)</sup>
+[M] - Mute Tracks 1 to 8 <sup>(Pitch 12 to 19, Notes C0 to G0)</sup>
 
-[S] - Solo Channels 1 to 8 <sup>(Pitch 20 to 27, Notes G#0 to D#1)</sup>
+[S] - Solo Tracks 1 to 8 <sup>(Pitch 20 to 27, Notes G#0 to D#1)</sup>
 
 ### Chromatic Keyboard
 
