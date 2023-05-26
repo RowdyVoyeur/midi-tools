@@ -4,25 +4,25 @@
         "outputPortName": "M8",
         "outputChannel": 16,
         "ccTranslationMap": {
-                "124": {
+                "102": {
                         "shortFire": false,
                         "notes": [
                                 {"pitch": 4, "velocity": 127}
                         ]
                 },
-                "125": {
+                "103": {
                         "shortFire": false,
                         "notes": [
                                 {"pitch": 5, "velocity": 127}
                         ]
                 },
-                "126": {
+                "104": {
                         "shortFire": false,
                         "notes": [
                                 {"pitch": 6, "velocity": 127}
                         ]
                 },
-                "127": {
+                "105": {
                         "shortFire": false,
                         "notes": [
                                 {"pitch": 7, "velocity": 127}
