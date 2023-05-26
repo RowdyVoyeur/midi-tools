@@ -89,13 +89,13 @@ Scene 1 allows to control the M8 with the following nanoKONTROL buttons <sup>(Ch
 
 [O] - Option <sup>(Pitch 3, Note D#-1)</sup>
 
-[←] - Left <sup>(CC 124 to Pitch 4, Note E-1)</sup>
+[←] - Left <sup>(CC 102 to Pitch 4, Note E-1)</sup>
 
-[→] - Right <sup>(CC 125 to Pitch 5, Note F-1)</sup>
+[→] - Right <sup>(CC 103 to Pitch 5, Note F-1)</sup>
 
-[↑] - Up <sup>(CC 126 to Pitch 6, Note F#-1)</sup>
+[↑] - Up <sup>(CC 104 to Pitch 6, Note F#-1)</sup>
 
-[↓] - Down <sup>(CC 127 to Pitch 7, Note G-1)</sup>
+[↓] - Down <sup>(CC 105 to Pitch 7, Note G-1)</sup>
 
 ### Mixer, Mute and Solo
 
@@ -125,13 +125,15 @@ Scene 4 allows to select different audio routings by pressing the following nano
 
 [B] - [IN->MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) <sup>(Pitch 122, Note D9)</sup>
 
-[C] - [M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) <sup>(Pitch 124, Note E9)</sup>
+[C] - [M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) <sup>(Pitch 123, Note D#9)</sup>
 
-[D] - [IN->M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig4.sh) <sup>(Pitch 125, Note F9)</sup>
+[D] - [IN->M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig4.sh) <sup>(Pitch 124, Note E9)</sup>
 
-[E] - [MC101->OUT | M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) <sup>(Pitch 126, Note F#9)</sup>
+[E] - [MC101->OUT | M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) <sup>(Pitch 125, Note F9)</sup>
 
-[F] - [IN->MC101->OUT | IN->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) <sup>(Pitch 127, Note G9)</sup>
+[F] - [IN->MC101->OUT | IN->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) <sup>(Pitch 126, Note F#9)</sup>
+
+[G] - [IN-OUT | MC101->OUT | M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig7.sh) <sup>(Pitch 127, Note G9)</sup>
 
 ## References
 
