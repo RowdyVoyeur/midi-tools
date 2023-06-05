@@ -133,22 +133,17 @@ Scene 3 is a chromatic keyboard that sends MIDI Notes from the following buttons
 
 Scene 4 allows to select different audio routings and to adjust Alsamixer levels:
 
-<sup>(Channel 15)</sup>:
-
-| Button | Routing | Pitch | Note | Channel |
+| Button/Knob | Routing/Command | CC | Pitch | Note | Channel |
 | --- | --- | --- | --- | --- |
-| [A] | [MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig1.sh) | 121 | C#9 | 15 |
-| [B] | [IN->MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) | 122 | D9 | 15 |
-| [C] | [M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) | 123 | D#9 | 15 |
-| [D] | [IN->M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig4.sh) | 124 | E9 | 15 |
-| [E] | [MC101->OUT / M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) | 125 | F9 | 15 |
-| [F] | [IN->MC101->OUT / IN->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) | 126 | F#9 | 15 |
-| [G] | [IN->OUT / MC101->OUT / M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig7.sh) | 127 | G9 | 15 |
-
-| Knob | Command | CC | Channel |
-| --- | --- | --- | --- |
-| [1] | [Adjust Output Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) | 118 | 15 |
-| [2] | [Adjust Input Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) | 119 | 15 |
+| [A] | [MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig1.sh) | - | 121 | C#9 | 15 |
+| [B] | [IN->MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) | - | 122 | D9 | 15 |
+| [C] | [M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) | - | 123 | D#9 | 15 |
+| [D] | [IN->M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig4.sh) | - | 124 | E9 | 15 |
+| [E] | [MC101->OUT / M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) | - | 125 | F9 | 15 |
+| [F] | [IN->MC101->OUT / IN->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) | - | 126 | F#9 | 15 |
+| [G] | [IN->OUT / MC101->OUT / M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig7.sh) | - | 127 | G9 | 15 |
+| [1] | [Adjust Output Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) | 118 | - | - | 15 |
+| [2] | [Adjust Input Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) | 119 | - | - | 15 |
 
 ## References
 
