@@ -93,71 +93,65 @@ This section shows the layout of the various nanoKONTROL scenes. This assumes yo
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/1.jpg" width="500">
 
-Scene 1 allows to control the M8 with the following nanoKONTROL buttons <sup>(Channel 16)</sup>:
+Scene 1 allows to control the M8 with the following buttons of the nanoKONTROL:
 
 | Button | Command | Pitch | Note | Channel |
 | --- | --- | --- | --- | --- |
 | [P] | Play | 0 | C-1 | 16 |
+| [S] | Shift | 1 | C#-1 | 16 |
+| [E] | Edit | 2 | D-1 | 16 |
+| [O] | Option | 3 | D#-1 | 16 |
 
- -  <sup>(Pitch 0, Note )</sup>
-
-[S] - Shift <sup>(Pitch 1, Note C#-1)</sup>
-
-[E] - Edit <sup>(Pitch 2, Note D-1)</sup>
-
-[O] - Option <sup>(Pitch 3, Note D#-1)</sup>
-
-[←] - Left <sup>(CC 102 to Pitch 4, Note E-1)</sup>
-
-[→] - Right <sup>(CC 103 to Pitch 5, Note F-1)</sup>
-
-[↑] - Up <sup>(CC 104 to Pitch 6, Note F#-1)</sup>
-
-[↓] - Down <sup>(CC 105 to Pitch 7, Note G-1)</sup>
+| Button | Command | CC | Pitch | Note | Channel |
+| --- | --- | --- | --- | --- | --- |
+| [←] | Left | 102 | 4 | E-1 | 16 |
+| [→] | Right | 103 | 5 | F-1 | 16 |
+| [↑] | Up | 104 | 6 | F#-1 | 16 |
+| [↓] | Down | 105 | 7 | G-1 | 16 |
 
 ### Mixer, Mute and Solo
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/2.jpg" width="500">
 
-Scene 2 allows to individually control the Mute and Solo of Tracks 1 to 8 of the M8 with the following buttons of the nanoKONTROL <sup>(Channel 16)</sup>:
+Scene 2 allows to individually Mute and/or Solo Tracks 1 to 8 of the M8 with the following buttons of the nanoKONTROL:
 
-[M] - Mute Tracks 1 to 8 <sup>(Pitch 12 to 19, Notes C0 to G0)</sup>
-
-[S] - Solo Tracks 1 to 8 <sup>(Pitch 20 to 27, Notes G#0 to D#1)</sup>
+| Button | Command | Pitch | Note | Channel |
+| --- | --- | --- | --- | --- |
+| [M] | Mute Tracks 1 to 8 | 12 to 19 | C0 to G0 | 16 |
+| [S] | Solo Tracks 1 to 8 | 20 to 27 | G#0 to D#1 | 16 |
 
 ### Chromatic Keyboard
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/3.jpg" width="500">
 
-Scene 3 is a chromatic keyboard that sends MIDI Notes from the following nanoKONTROL buttons <sup>(Channel 8)</sup>:
+Scene 3 is a chromatic keyboard that sends MIDI Notes from the following buttons of the nanoKONTROL:
 
-[A] to [R] - Notes C-1 to F0
+| Button | Note | Channel |
+| --- | --- | --- |
+| [A] to [R] | C-1 to F0 | 8 |
 
 ### Audio Routing
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/4.jpg" width="500">
 
-Scene 4 allows to select different audio routings by pressing the following nanoKONTROL buttons <sup>(Channel 15)</sup>:
+Scene 4 allows to select different audio routings and to adjust Alsamixer levels:
 
-[A] - [MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig1.sh) <sup>(Pitch 121, Note C#9)</sup>
+<sup>(Channel 15)</sup>:
 
-[B] - [IN->MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) <sup>(Pitch 122, Note D9)</sup>
+| Button | Routing | Pitch | Note | Channel |
+| --- | --- | --- | --- | --- |
+| [A] | [MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig1.sh) | 121 | C#9 | 15 |
+| [B] | [IN->MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) | 122 | D9 | 15 |
+| [C] | [M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) | 123 | D#9 | 15 |
+| [D] | [IN->M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig4.sh) | 124 | E9 | 15 |
+| [E] | [MC101->OUT | M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) | 125 | F9 | 15 |
+| [F] | [IN->MC101->OUT | IN->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) | 126 | F#9 | 15 |
+| [G] | [IN->OUT | MC101->OUT | M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig7.sh) | 127 | G9 | 15 |
 
-[C] - [M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) <sup>(Pitch 123, Note D#9)</sup>
-
-[D] - [IN->M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig4.sh) <sup>(Pitch 124, Note E9)</sup>
-
-[E] - [MC101->OUT | M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig5.sh) <sup>(Pitch 125, Note F9)</sup>
-
-[F] - [IN->MC101->OUT | IN->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) <sup>(Pitch 126, Note F#9)</sup>
-
-[G] - [IN->OUT | MC101->OUT | M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig7.sh) <sup>(Pitch 127, Note G9)</sup>
-
-In this scene, the following Alsamixer levels can also be controlled:
-
-[1] - [Main Output Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) <sup>(CC 118)</sup>
-
-[2] - [Main Input Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) <sup>(CC 119)</sup>
+| Knob | Command | CC | Channel |
+| --- | --- | --- | --- |
+| [1] | [Adjust Output Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) | 118 | 15 |
+| [2] | [Adjust Input Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) | 119 | 15 |
 
 ## References
 
