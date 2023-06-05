@@ -134,7 +134,7 @@ Scene 3 is a chromatic keyboard that sends MIDI Notes from the following buttons
 Scene 4 allows to select different audio routings and to adjust Alsamixer levels:
 
 | Button/Knob | Routing/Command | CC | Pitch | Note | Channel |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
 | [A] | [MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig1.sh) | - | 121 | C#9 | 15 |
 | [B] | [IN->MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig2.sh) | - | 122 | D9 | 15 |
 | [C] | [M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig3.sh) | - | 123 | D#9 | 15 |
