@@ -147,7 +147,7 @@ Scene 4 allows to select different audio routings by pressing the following nano
 
 [F] - [IN->MC101->OUT | IN->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig6.sh) <sup>(Pitch 126, Note F#9)</sup>
 
-[G] - [IN-OUT | MC101->OUT | M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig7.sh) <sup>(Pitch 127, Note G9)</sup>
+[G] - [IN->OUT | MC101->OUT | M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig7.sh) <sup>(Pitch 127, Note G9)</sup>
 
 In this scene, the following Alsamixer levels can also be controlled:
 
