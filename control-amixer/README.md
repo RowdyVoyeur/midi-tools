@@ -78,4 +78,4 @@ Then, to run the script simply type the following in Terminal:
 
 ## Requirements
 
-This script uses `aseqdump` and `amixer` commands, which are both part of [alsa-utils](https://github.com/alsa-project/alsa-utils). If you are using [Blokas Patchbo](https://blokas.io/patchbox-os), you don't need to install anything, because this is part of the OS.
+This script uses `aseqdump` and `amixer` commands, which are both part of [alsa-utils](https://github.com/alsa-project/alsa-utils). If you are using [Blokas Patchbox](https://blokas.io/patchbox-os), you don't need to install anything, because this is part of the OS.
