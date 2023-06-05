@@ -95,7 +95,11 @@ This section shows the layout of the various nanoKONTROL scenes. This assumes yo
 
 Scene 1 allows to control the M8 with the following nanoKONTROL buttons <sup>(Channel 16)</sup>:
 
-[P] - Play <sup>(Pitch 0, Note C-1)</sup>
+| Button | Command | Pitch | Note | Channel |
+| --- | --- | --- | --- | --- |
+| [P] | Play | 0 | C-1 | 16 |
+
+ -  <sup>(Pitch 0, Note )</sup>
 
 [S] - Shift <sup>(Pitch 1, Note C#-1)</sup>
 
