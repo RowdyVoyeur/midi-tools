@@ -10,7 +10,7 @@ This is a set of MIDI tools to use with [M8C running on a Raspberry Pi with Patc
 
 - Capture specific MIDI Control Change (CC) messages sent by the Korg nanoKONTROL and use them to control the main output and main input volume levels of Alsamixer.
 
-While the second task can be useful for any setup, the first task is only useful if you have the original version of Korg nanoKONTROL. As far as I know, the following versions of this device can send MIDI Note messages from the transport buttons. Therefore, it is not necessary to convert MIDI CC to MIDI Notes.
+While the second and third tasks can be useful for any setup, the first task is only useful if you have the original version of Korg nanoKONTROL. As far as I know, the following versions of this device can send MIDI Note messages from the transport buttons. Therefore, it is not necessary to convert MIDI CC to MIDI Notes.
 
 ### CC To Note
 
