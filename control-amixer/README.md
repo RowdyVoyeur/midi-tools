@@ -41,7 +41,7 @@ card 1: Device [USB Audio Device], device 0: USB Audio [USB Audio]
   Subdevice #0: subdevice #0
 ```
 
-5. Then, you can go to the script and add the audion device name after `amixer -D hw:`. Since I'm using `card 1`, I need to use the name `Device` in the script. In my case, it looks like this `amixer -D hw:Device`.
+5. Then, you can go to the script and add the audio device name after `amixer -D hw:`. Since I'm using `card 1`, I need to use the name `Device` in the script. In my case, it looks like this `amixer -D hw:Device`.
 
 6. Find the names of the simple mixer controls you wish to control by typing `amixer -c N` in Terminal, where `N` is the card number of the audio device you wish to control. Here's my output of `amixer -c 1`:
 ```
