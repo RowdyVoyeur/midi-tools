@@ -27,17 +27,21 @@ fi
 
 sleep 1
 
-# Connect audio of USB Card Microphone to MC101 In
+# Connect audio of USB Card Microphone or Audio Card In to MC101 In
 jack_connect system:capture_1 MC101_out:playback_1
-jack_connect system:capture_1 MC101_out:playback_2
+# Comment the following line and uncomment the next one, if your USB Card or Audio Card In has a mono ADC
+jack_connect system:capture_2 MC101_out:playback_2
+# jack_connect system:capture_1 MC101_out:playback_2
 
 # Connect audio of MC101 Out to System In
 jack_connect MC101_in:capture_1 system:playback_1
 jack_connect MC101_in:capture_2 system:playback_2
 
-# Connect audio of USB Card Microphone to M8 In
+# Connect audio of USB Card Microphone or Audio Card In to M8 In
 jack_connect system:capture_1 M8_out:playback_1
-jack_connect system:capture_1 M8_out:playback_2
+# Comment the following line and uncomment the next one, if your USB Card or Audio Card In has a mono ADC
+jack_connect system:capture_2 M8_out:playback_2
+# jack_connect system:capture_1 M8_out:playback_2
 
 # Connect audio of M8 Out to System In
 jack_connect M8_in:capture_1 system:playback_1
