@@ -33,4 +33,6 @@ jack_connect M8_in:capture_2 MC101_out:playback_1
 
 # Connect audio of USB Card Microphone to MC101 In (Right Channel)
 jack_connect system:capture_1 MC101_out:playback_2
-jack_connect system:capture_1 MC101_out:playback_2
+# Comment the following line and uncomment the next one, if your USB Card or Audio Card In has a mono ADC
+jack_connect system:capture_2 MC101_out:playback_2
+# jack_connect system:capture_1 MC101_out:playback_2
