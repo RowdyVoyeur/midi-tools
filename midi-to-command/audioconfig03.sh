@@ -42,8 +42,10 @@ else
   echo "MC101 detected, connecting."
 
 # Connect audio of M8 Out to MC101 In
-jack_connect M8_in:capture_1 MC101_out:playback_1
-jack_connect M8_in:capture_2 MC101_out:playback_2
+# If MC101 is in Vendor Driver Mode, use MC101_out:playback_3 and MC101_out:playback_4
+# If MC101 is in Generic Driver Mode, use MC101_out:playback_1 and MC101_out:playback_2
+jack_connect M8_in:capture_1 MC101_out:playback_3
+jack_connect M8_in:capture_2 MC101_out:playback_4
 
 # Connect audio of MC101 Out to System In
 jack_connect MC101_in:capture_1 system:playback_1
