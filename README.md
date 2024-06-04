@@ -142,7 +142,7 @@ Scene 4 allows to select different audio routings and to adjust Alsamixer levels
 | [C] | [M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig03.sh) | - | 125 | F9 | 15 |
 | [D] | [IN->M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig04.sh) | - | 124 | E9 | 15 |
 | [E] | [M8->MC101 / IN->MC101](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig05.sh) | - | 123 | D#9 | 15 |
-| [F] | [M8->MC101(L) / IN->MC101(R)](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig06.sh) | - | 122 | D9 | 15 |
+| [F] | [IN->MC101(L) / M8->MC101(R)](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig06.sh) | - | 122 | D9 | 15 |
 | [G] | [MC101->OUT / M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig07.sh) | - | 121 | C#9 | 15 |
 | [H] | [IN->OUT / MC101->OUT / M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig08.sh) | - | 120 | C9 | 15 |
 | [I] | [IN->MC101->OUT / IN->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig09.sh) | - | 119 | B8 | 15 |
