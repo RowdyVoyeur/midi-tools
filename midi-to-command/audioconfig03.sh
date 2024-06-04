@@ -38,6 +38,11 @@ if [ $(aplay -l | grep -c "MC101") -eq 0 ]; then
   jack_connect M8_in:capture_1 system:playback_1
   jack_connect M8_in:capture_2 system:playback_2
   
+  # Connect audio of USB Card Microphone or Audio Card In to M8 In if MC101 is not detected
+  # If USB Card or Audio Card In has a Mono ADC, use system:capture_1 in both lines, which creates a fake stereo
+  jack_connect system:capture_1 M8_out:playback_1
+  jack_connect system:capture_2 M8_out:playback_2
+  
 else
   echo "MC101 detected, connecting."
 
