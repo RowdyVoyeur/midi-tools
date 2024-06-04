@@ -103,7 +103,7 @@ If you are using a different setup, then just remember the following default con
 
 - [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#midi-to-command) and Korg nanoKONTROL's scene [4](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#audio-routing) are sending MIDI data to the M8 on channel 15;
 
-- Korg nanoKONTROL's scene [3](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#chromatic-keyboard) is sending MIDI data to the M8 on channel 8 (you can find more information about this [here](https://github.com/RowdyVoyeur/midi-tools/blob/main/nanoKONTROL/README.md)).
+- Korg nanoKONTROL's scene [3](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#chromatic-keyboard) is sending MIDI data to the M8 on channel 8 (you can find more information about this [here](https://github.com/RowdyVoyeur/midi-tools/edit/main/nanoKONTROL/README.md#midi-tools-setup)).
 
 ## References
 
