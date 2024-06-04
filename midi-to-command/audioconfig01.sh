@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Routing: MC101->M8->OUT
-
 # Get list of connected ports
 connected_ports=$(jack_lsp -c | grep -v '^ ')
 
@@ -26,6 +24,8 @@ else
         fi
     done <<< "$connected_ports"
 fi
+
+# Audio Routing: MC101->M8->OUT
 
 sleep 1
 
