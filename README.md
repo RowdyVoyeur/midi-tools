@@ -2,11 +2,11 @@
 
 ## Introduction
 
-This is a set of MIDI tools to use with [M8C running on a Raspberry Pi with Patchbox OS](https://github.com/RowdyVoyeur/m8c-rpi4). These tools have been customised to programmatically perform the following tasks:
+This is a set of MIDI tools to use with [M8C](https://github.com/RowdyVoyeur/m8c-rpi4) running on a Raspberry Pi with Patchbox OS, and a Roland MC-101. These tools have been customised to programmatically perform the following tasks:
 
 - Capture specific MIDI Control Change (CC) messages sent by the transport buttons of the Korg nanoKONTROL and convert them into MIDI Notes to control the M8;
 
-- Capture specific MIDI Note messages sent by the Korg nanoKONTROL and convert them into commands to change the audio routing between System Audio In, M8, MC-101 and System Audio Out. If you have a [Pisound](https://blokas.io/pisound/docs/), this can also be achieved with this [script](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/audio_routing.sh), which uses the clicks on [The Button](https://blokas.io/pisound/docs/the-button/) to change the audio routing;
+- Capture specific MIDI Note messages sent by the Korg nanoKONTROL and convert them into commands to change the audio routing between M8, MC-101, System Audio In and System Audio Out. If you have a [Pisound](https://blokas.io/pisound/docs/), this can also be achieved with this [script](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/audio_routing.sh), which uses the clicks on [The Button](https://blokas.io/pisound/docs/the-button/) to change the audio routing;
 
 - Capture specific MIDI Control Change (CC) messages sent by the Korg nanoKONTROL and use them to control the main output and main input volume levels of Alsamixer.
 
@@ -95,15 +95,15 @@ If you're using the exact same exact setup comprised of M8, MC-101 and Korg nano
 
 - MC-101's `Control Channel` is set to anything different than **8**, **15** or **16** (to prevent MIDI conflicts);
 
-- Korg nanoKONTROL is using this [set file](https://github.com/RowdyVoyeur/midi-tools/tree/main/nanoKONTROL).
+- Korg nanoKONTROL is using this [set file](https://github.com/RowdyVoyeur/midi-tools/blob/main/nanoKONTROL/m8c.nktrl_set).
 
 If you are using a different setup, then just remember the following default configurations:
 
-- [CC To Note](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#midi-cc-to-note) and Korg nanoKONTROL's scenes [1](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#gamepad-controller) and [2](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#mixer-mute-and-solo) are sending MIDI data to the M8 on channel 16;
+- [CC To Note](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#midi-cc-to-note) and Korg nanoKONTROL's scenes [1](https://github.com/RowdyVoyeur/midi-tools/tree/main/nanoKONTROL#gamepad-controller) and [2](https://github.com/RowdyVoyeur/midi-tools/tree/main/nanoKONTROL#mixer-mute-and-solo) are sending MIDI data to the M8 on channel 16;
 
-- [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#midi-to-command) and Korg nanoKONTROL's scene [4](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#audio-routing) are sending MIDI data to the M8 on channel 15;
+- [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#midi-to-command) and Korg nanoKONTROL's scene [4](https://github.com/RowdyVoyeur/midi-tools/tree/main/nanoKONTROL#audio-routing) are sending MIDI data to the M8 on channel 15;
 
-- Korg nanoKONTROL's scene [3](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#chromatic-keyboard) is sending MIDI data to the M8 on channel 8 (you can find more information about this [here](https://github.com/RowdyVoyeur/midi-tools/edit/main/nanoKONTROL/README.md#midi-tools-setup)).
+- Korg nanoKONTROL's scene [3](https://github.com/RowdyVoyeur/midi-tools/tree/main/nanoKONTROL#chromatic-keyboard) is sending MIDI data to the M8 on channel 8 (you can find more information about this [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/nanoKONTROL#midi-tools-setup)).
 
 ## References
 
