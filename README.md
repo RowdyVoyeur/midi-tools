@@ -6,7 +6,7 @@ This is a set of MIDI tools to use with [M8C running on a Raspberry Pi with Patc
 
 - Capture specific MIDI Control Change (CC) messages sent by the transport buttons of the Korg nanoKONTROL and convert them into MIDI Notes to control the M8;
 
-- Capture specific MIDI Note messages sent by the Korg nanoKONTROL and convert them into commands to change the audio routing between USB Card Microphone, M8, MC-101 and System Audio Out;
+- Capture specific MIDI Note messages sent by the Korg nanoKONTROL and convert them into commands to change the audio routing between System Audio In, M8, MC-101 and System Audio Out. If you have a [Pisound](https://blokas.io/pisound/docs/), this can also be achieved with this [script](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/audio_routing.sh), which uses the clicks on [The Button](https://blokas.io/pisound/docs/the-button/) to change the audio routing;
 
 - Capture specific MIDI Control Change (CC) messages sent by the Korg nanoKONTROL and use them to control the main output and main input volume levels of Alsamixer.
 
@@ -59,7 +59,7 @@ sudo pip3 install pyyaml
 ```
 cd
 cd midi-tools/control-amixer
-sudo chmod a+x *.sh
+sudo chmod +x *.sh
 ```
 
 6. Once the steps above are done, you should test the scripts before automatically start them on boot. Connect the MIDI device(s), reboot and run the following to test `midi-to-command`:
@@ -83,72 +83,27 @@ cd midi-tools/control-amixer
 
 9. If you did not find any errors, you can configure how you would like these tools to automatically start on boot. You can use several methods such as `systemd` or `crontab` to automatically start these tools on boot. However, if you are using the [M8C Module for Patchbox OS](https://github.com/RowdyVoyeur/m8c-rpi4-module) you can simply customise the [m8c.sh](https://github.com/RowdyVoyeur/m8c-rpi4/blob/main/m8c.sh) script and uncomment the relevant lines.
 
-10. You need to configure the MIDI Control Channels on each device to receive data and prevent conflicts. If you're using the exact same exact setup comprised of M8, USB Card, MC-101 and Korg nanoKONTROL, then you need to make sure the M8's `Control Map Chan` is set to **16**, the MC-101's `Control Channel` is set to anything different than **8**, **15** or **16** (to prevent MIDI conflicts), and Korg nanoKONTROL is using this [set file](https://github.com/RowdyVoyeur/midi-tools/tree/main/nanoKONTROL). If you are using a different setup, then just remember the following default configurations: [CC To Note](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#midi-cc-to-note) and Korg nanoKONTROL's scenes [1](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#gamepad-controller) and [2](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#mixer-mute-and-solo) are sending MIDI data to the M8 on channel 16; [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#midi-to-command) and Korg nanoKONTROL's scene [4](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#audio-routing) are sending MIDI data to the M8 on channel 15; Korg nanoKONTROL's scene [3](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#chromatic-keyboard) is sending MIDI data to the M8 on channel 8 (you can find more information about this in the tables below).
+10. Specific information about the configuration of each tool can be found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#configuration) for CC To Note, [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#configuration) for MIDI To Command and [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/control-amixer) for Control Amixer.
 
-11. Specific information about the configuration of each tool can be found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#configuration) for CC To Note, [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#configuration) for MIDI To Command and [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/control-amixer) for Control Amixer.
+## MIDI Configuration
 
-## nanoKONTROL
+You need to configure the MIDI Control Channels on each device to receive data and prevent conflicts.
 
-This section shows the layout of the various nanoKONTROL scenes. This assumes you are using the nanoKONTROL set file found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/nanoKONTROL).
+If you're using the exact same exact setup comprised of M8, MC-101 and Korg nanoKONTROL, then you can use these settings:
 
-### Gamepad Controller
+- M8's `Control Map Chan` is set to **16**;
 
-<img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/1.jpg" width="500">
+- MC-101's `Control Channel` is set to anything different than **8**, **15** or **16** (to prevent MIDI conflicts);
 
-Scene 1 allows to control the M8 with the following buttons of the nanoKONTROL:
+- Korg nanoKONTROL is using this [set file](https://github.com/RowdyVoyeur/midi-tools/tree/main/nanoKONTROL).
 
-| Button | Command | CC | Pitch | Note | Channel |
-| --- | --- | --- | --- | --- | --- |
-| [P] | Play | - | 0 | C-1 | 16 |
-| [S] | Shift | - | 1 | C#-1 | 16 |
-| [E] | Edit | - | 2 | D-1 | 16 |
-| [O] | Option | - | 3 | D#-1 | 16 |
-| [←] | Left | 102 | 4 | E-1 | 16 |
-| [→] | Right | 103 | 5 | F-1 | 16 |
-| [↑] | Up | 104 | 6 | F#-1 | 16 |
-| [↓] | Down | 105 | 7 | G-1 | 16 |
+If you are using a different setup, then just remember the following default configurations:
 
-### Mixer, Mute and Solo
+- [CC To Note](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#midi-cc-to-note) and Korg nanoKONTROL's scenes [1](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#gamepad-controller) and [2](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#mixer-mute-and-solo) are sending MIDI data to the M8 on channel 16;
 
-<img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/2.jpg" width="500">
+- [MIDI To Command](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#midi-to-command) and Korg nanoKONTROL's scene [4](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#audio-routing) are sending MIDI data to the M8 on channel 15;
 
-Scene 2 allows to individually Mute and/or Solo Tracks 1 to 8 of the M8 with the following buttons of the nanoKONTROL:
-
-| Button | Command | Pitch | Note | Channel |
-| --- | --- | --- | --- | --- |
-| [M] | Mute Tracks 1 to 8 | 12 to 19 | C0 to G0 | 16 |
-| [S] | Solo Tracks 1 to 8 | 20 to 27 | G#0 to D#1 | 16 |
-
-### Chromatic Keyboard
-
-<img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/3.jpg" width="500">
-
-Scene 3 is a chromatic keyboard that sends MIDI Notes from the following buttons of the nanoKONTROL:
-
-| Button | Note | Channel |
-| --- | --- | --- |
-| [A] to [R] | C-1 to F0 | 8 |
-
-### Audio Routing
-
-<img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/4.jpg" width="500">
-
-Scene 4 allows to select different audio routings and to adjust Alsamixer levels of the System Audio In and Out:
-
-| Button/Knob | Routing/Command | CC | Pitch | Note | Channel |
-| --- | --- | --- | --- | --- | --- |
-| [A] | [MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig01.sh) | - | 127 | G9 | 15 |
-| [B] | [IN->MC101->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig02.sh) | - | 126 | F#9 | 15 |
-| [C] | [M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig03.sh) | - | 125 | F9 | 15 |
-| [D] | [IN->M8->MC101->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig04.sh) | - | 124 | E9 | 15 |
-| [E] | [M8->MC101 / IN->MC101](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig05.sh) | - | 123 | D#9 | 15 |
-| [F] | [IN->MC101(L) / M8->MC101(R)](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig06.sh) | - | 122 | D9 | 15 |
-| [G] | [MC101->OUT / M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig07.sh) | - | 121 | C#9 | 15 |
-| [H] | [IN->OUT / MC101->OUT / M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig08.sh) | - | 120 | C9 | 15 |
-| [I] | [IN->MC101->OUT / IN->M8->OUT](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig09.sh) | - | 119 | B8 | 15 |
-| [J] | [M8->MC101](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig10.sh) | - | 118 | A#8 | 15 |
-| [1] | [Adjust Output Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) | 118 | - | - | 15 |
-| [2] | [Adjust Input Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) | 119 | - | - | 15 |
+- Korg nanoKONTROL's scene [3](https://github.com/RowdyVoyeur/midi-tools?tab=readme-ov-file#chromatic-keyboard) is sending MIDI data to the M8 on channel 8 (you can find more information about this [here](https://github.com/RowdyVoyeur/midi-tools/blob/main/nanoKONTROL/README.md)).
 
 ## References
 
