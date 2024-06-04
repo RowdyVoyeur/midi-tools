@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Routing: MC101->M8->OUT
+
 # Get list of connected ports
 connected_ports=$(jack_lsp -c | grep -v '^ ')
 
