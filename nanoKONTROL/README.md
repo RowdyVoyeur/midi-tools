@@ -1,8 +1,10 @@
 # nanoKONTROL
 
-This section shows the layout of the various nanoKONTROL scenes. This assumes you are using the nanoKONTROL set file found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/nanoKONTROL).
+## MIDI Tools Setup
 
-## Gamepad Controller
+This section shows the layout of the various nanoKONTROL scenes for [this](https://github.com/RowdyVoyeur/midi-tools/blob/main/nanoKONTROL/m8c.nktrl_set) set file.
+
+### Gamepad Controller
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/1.jpg" width="500">
 
@@ -19,7 +21,7 @@ Scene 1 allows to control the M8 with the following buttons of the nanoKONTROL:
 | [↑] | Up | 104 | 6 | F#-1 | 16 |
 | [↓] | Down | 105 | 7 | G-1 | 16 |
 
-## Mixer, Mute and Solo
+### Mixer, Mute and Solo
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/2.jpg" width="500">
 
@@ -30,7 +32,7 @@ Scene 2 allows to individually Mute and/or Solo Tracks 1 to 8 of the M8 with the
 | [M] | Mute Tracks 1 to 8 | 12 to 19 | C0 to G0 | 16 |
 | [S] | Solo Tracks 1 to 8 | 20 to 27 | G#0 to D#1 | 16 |
 
-## Chromatic Keyboard
+### Chromatic Keyboard
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/3.jpg" width="500">
 
@@ -40,7 +42,7 @@ Scene 3 is a chromatic keyboard that sends MIDI Notes from the following buttons
 | --- | --- | --- |
 | [A] to [R] | C-1 to F0 | 8 |
 
-## Audio Routing
+### Audio Routing
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/4.jpg" width="500">
 
@@ -60,3 +62,36 @@ Scene 4 allows to select different audio routings and to adjust Alsamixer levels
 | [J] | [M8->MC101](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig10.sh) | - | 118 | A#8 | 15 |
 | [1] | [Adjust Output Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) | 118 | - | - | 15 |
 | [2] | [Adjust Input Level](https://github.com/RowdyVoyeur/midi-tools/blob/main/control-amixer/control-amixer.sh) | 119 | - | - | 15 |
+
+## Pisound Setup
+
+This section shows the layout of the various nanoKONTROL scenes for [this](https://github.com/RowdyVoyeur/midi-tools/blob/main/nanoKONTROL/pisound.nktrl_set) set file.
+
+### M8 Mixer
+
+<img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/5.jpg" width="500">
+
+Scene 1 allows to individually Mute and/or Solo Tracks 1 to 8 of the M8 with the following buttons of the nanoKONTROL:
+
+| Button | Command | Pitch | Note | Channel |
+| --- | --- | --- | --- | --- |
+| [A] [C] ... [O] [Q] | Mute Tracks 1 to 8 | 12 to 19 | C0 to G0 | 16 |
+| [B] [D] ... [P] [R] | Solo Tracks 1 to 8 | 20 to 27 | G#0 to D#1 | 16 |
+
+### M8 MIDI Mapping
+
+<img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/6.jpg" width="500">
+
+Scene 2 allows pots and faders to send MIDI data on Channel 16 to control different M8 parameters.
+
+### MC-101 MIDI Mapping
+
+<img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/7.jpg" width="500">
+
+Scene 3 allows pots and faders to send MIDI data on Channel 3 to control different parameters of MC-101 Track 3.
+
+### MC-101 MIDI Mapping
+
+<img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/8.jpg" width="500">
+
+Scene 4 allows pots and faders to send MIDI data on Channel 4 to control different parameters of MC-101 Track 4.
