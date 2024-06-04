@@ -1,4 +1,4 @@
-# MIDI Tools for M8C
+# MIDI Tools for M8C and Roland MC-101
 
 ## Introduction
 
