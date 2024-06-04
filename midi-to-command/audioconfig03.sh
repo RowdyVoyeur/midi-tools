@@ -27,6 +27,20 @@ fi
 
 sleep 1
 
+# Audio Routing: M8->MC101->OUT
+
+# Check if the Instrument with the Card Name "MC101" is connected to the Raspberry Pi
+# Use "aplay -l" to find the Card Name of any connected audio devices
+if [ $(aplay -l | grep -c "MC101") -eq 0 ]; then
+  echo "MC101 not detected, skipping connection."
+
+  # Connect audio of M8 Out to System In if MC101 is not detected
+  jack_connect M8_in:capture_1 system:playback_1
+  jack_connect M8_in:capture_2 system:playback_2
+  
+else
+  echo "MC101 detected, connecting."
+
 # Connect audio of M8 Out to MC101 In
 jack_connect M8_in:capture_1 MC101_out:playback_1
 jack_connect M8_in:capture_2 MC101_out:playback_2
@@ -34,3 +48,5 @@ jack_connect M8_in:capture_2 MC101_out:playback_2
 # Connect audio of MC101 Out to System In
 jack_connect MC101_in:capture_1 system:playback_1
 jack_connect MC101_in:capture_2 system:playback_2
+
+fi
