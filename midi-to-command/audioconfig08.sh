@@ -27,15 +27,26 @@ fi
 
 sleep 1
 
-# Connect audio of USB Card Microphone or Audio Card In to System In
-jack_connect system:capture_1 system:playback_1
-# Comment the following line and uncomment the next one, if your USB Card or Audio Card In has a mono ADC
-jack_connect system:capture_2 system:playback_2
-# jack_connect system:capture_1 system:playback_2
+# Audio Routing: IN->OUT / MC101->OUT / M8->OUT
+
+# Check if the Instrument with the Card Name "MC101" is connected to the Raspberry Pi
+# Use "aplay -l" to find the Card Name of any connected audio devices
+if [ $(aplay -l | grep -c "MC101") -eq 0 ]; then
+  echo "MC101 not detected, skipping connection."
+  
+else
+  echo "MC101 detected, connecting."
 
 # Connect audio of MC101 Out to System In
 jack_connect MC101_in:capture_1 system:playback_1
 jack_connect MC101_in:capture_2 system:playback_2
+
+fi
+
+# Connect audio of USB Card Microphone or Audio Card In to System In
+# If USB Card or Audio Card In has a Mono ADC, use system:capture_1 in both lines, which creates a fake stereo
+jack_connect system:capture_1 system:playback_1
+jack_connect system:capture_2 system:playback_2
 
 # Connect audio of M8 Out to System In
 jack_connect M8_in:capture_1 system:playback_1
