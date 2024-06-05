@@ -83,7 +83,7 @@ cd midi-tools/control-amixer
 
 9. If you did not find any errors, you can configure how you would like these tools to automatically start on boot. You can use several methods such as `systemd` or `crontab` to automatically start these tools on boot. However, if you are using the [M8C Module for Patchbox OS](https://github.com/RowdyVoyeur/m8c-rpi4-module) you can simply customise the [m8c.sh](https://github.com/RowdyVoyeur/m8c-rpi4/blob/main/m8c.sh) script and uncomment the relevant lines.
 
-10. Specific information about the configuration of each tool can be found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#configuration) for CC To Note, [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#configuration) for MIDI To Command and [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/control-amixer) for Control Amixer.
+10. Specific information about the configuration of each tool can be found [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/cc-to-note#configuration) for CC To Note, [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/midi-to-command#configuration) for MIDI To Command, [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/control-amixer) for Control Amixer, and [here](https://github.com/RowdyVoyeur/midi-tools/tree/main/pisound-btn) for The Button.
 
 ## MIDI Configuration
 
