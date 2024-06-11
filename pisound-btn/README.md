@@ -17,7 +17,7 @@ I created a script that changes the audio routing of all the devices connected t
 | 7 | [M8->MC101 / IN->MC101](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig05.sh) |
 | 8 | [IN->MC101(L) / M8->MC101(R)](https://github.com/RowdyVoyeur/midi-tools/blob/main/midi-to-command/audioconfig06.sh) |
 
-Additionally, there is another [script](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reboot.sh) to clean up the audio routing and reboot.
+There are two additional scripts. One to [reset](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reset.sh) the audio connections and another one to [reboot](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reboot.sh).
 
 ## Configuration
 
@@ -34,21 +34,21 @@ cd midi-tools/midi-to-command
 sudo chmod +x *.sh
 ```
 
-3. Then, you need to move [audio_routing.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/audio_routing.sh) and [reboot.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reboot.sh) scripts to the folder `/usr/local/pisound/scripts/pisound-btn` and make them executable by everyone. Alternatively, you can create the files in the correct folder and copy all contents onto them. Here's an example of how to do it for audio_routing.sh:
+3. Then, you need to move [audio_routing.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/audio_routing.sh), [reset.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reset.sh) and [reboot.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reboot.sh) scripts to the folder `/usr/local/pisound/scripts/pisound-btn` and make them executable by everyone. Alternatively, you can create the files in the correct folder and copy all contents onto them. Here's an example of how to do it for [audio_routing.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/audio_routing.sh). Just to the same for the other scripts:
 ```
 cd /usr/local/pisound/scripts/pisound-btn
 sudo touch audio_routing.sh && sudo chmod +x audio_routing.sh
 sudo nano audio_routing.sh
 ```
 
-4. Once the [audio_routing.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/audio_routing.sh) file is in the correct folder and with the right permissions, run `pisound-config`:
+4. Once all the scripts are in the correct folder and with the right permissions, run `pisound-config`:
 ```
 sudo pisound-config
 ```
 
 5. Set `CLICK_1`, `CLICK_2`, `CLICK_3` and `CLICK_OTHER`to execute the [audio_routing.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/audio_routing.sh) script.
 
-6. Set, for example `HOLD_3S ` to execute the [reboot.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reboot.sh) and, if you're not using Bluetooth, you can also set `HOLD_1S` to [do_nothing.sh](https://github.com/BlokasLabs/pisound/blob/master/scripts/pisound-btn/do_nothing.sh).
+6. Set, for example `HOLD_3S ` to execute [reboot.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reboot.sh) or [reset](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reset.sh) and, if you're not using Bluetooth, you can also set `HOLD_1S` to [do_nothing.sh](https://github.com/BlokasLabs/pisound/blob/master/scripts/pisound-btn/do_nothing.sh).
 
 ## Requirements
 
