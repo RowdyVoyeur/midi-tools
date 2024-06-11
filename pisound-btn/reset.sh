@@ -1,4 +1,9 @@
-#!/bin/bash
+#!/bin/sh
+
+. /usr/local/pisound/scripts/common/common.sh
+
+flash_leds 1
+log "Preparing to reset audio connections."
 
 # Get list of connected ports
 connected_ports=$(jack_lsp -c | grep -v '^ ')
