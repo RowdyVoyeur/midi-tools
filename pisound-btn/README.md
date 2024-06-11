@@ -48,7 +48,7 @@ sudo pisound-config
 
 5. Set `CLICK_1`, `CLICK_2`, `CLICK_3` and `CLICK_OTHER`to execute the [audio_routing.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/audio_routing.sh) script.
 
-6. Set, for example, `HOLD_3S ` to execute [reboot.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reboot.sh) and, if you're not using Bluetooth, you can set `HOLD_1S` to execute [reset.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reset.sh) or to [do_nothing.sh](https://github.com/BlokasLabs/pisound/blob/master/scripts/pisound-btn/do_nothing.sh).
+6. Set, for example, `HOLD_3S ` to execute [reboot.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reboot.sh) and, if you're not using Bluetooth, you can set `HOLD_1S` to execute [reset.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reset.sh) or to [do_nothing.sh](https://github.com/BlokasLabs/pisound/blob/master/scripts/pisound-btn/do_nothing.sh). Please note that [reset.sh](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/reset.sh) may not work properly if you disconnect a USB audio device.
 
 7. Reboot and test the button configurations.
 
