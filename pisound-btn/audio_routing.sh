@@ -4,12 +4,12 @@
 
 case "$1" in
         "1")
-        # MC101->OUT / M8->OUT
-        su patch -c /home/patch/midi-tools/midi-to-command/audioconfig07.sh
+        # M8->MC101->OUT
+        su patch -c /home/patch/midi-tools/midi-to-command/audioconfig03.sh
         ;;
         "2")
-        # IN->MC101->OUT / IN->M8->OUT
-        su patch -c /home/patch/midi-tools/midi-to-command/audioconfig09.sh
+        # MC101->OUT / M8->OUT
+        su patch -c /home/patch/midi-tools/midi-to-command/audioconfig07.sh
         ;;
         "3")
         # MC101->M8->OUT
@@ -20,8 +20,8 @@ case "$1" in
         su patch -c /home/patch/midi-tools/midi-to-command/audioconfig02.sh
         ;;
         "5")
-        # M8->MC101->OUT
-        su patch -c /home/patch/midi-tools/midi-to-command/audioconfig03.sh
+        # IN->MC101->OUT / IN->M8->OUT
+        su patch -c /home/patch/midi-tools/midi-to-command/audioconfig09.sh
         ;;
         "6")
         # IN->M8->MC101->OUT
