@@ -90,7 +90,7 @@ Scene 2 allows pots and faders to send MIDI data on Channel 16 to control differ
 
 Scene 3 sends MIDI on Channel 14 and allows to queue song rows on the M8.
 
-### MC-101 MIDI Mapping
+### M8 Chromatic Keyboard
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/8.jpg" width="500">
 
