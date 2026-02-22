@@ -88,10 +88,10 @@ Scene 2 allows pots and faders to send MIDI data on Channel 16 to control differ
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/7.jpg" width="500">
 
-Scene 3 sends MIDI on Channel 14 and allows to queue song rows on the M8.
+Scene 3 sends MIDI on Channel 14 and allows to queue song rows on the M8 using buttons A to R.
 
 ### M8 Chromatic Keyboard
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/8.jpg" width="500">
 
-Scene 4 sends MIDI on Channel 13 and allows to play approximately one octave on the M8.
+Scene 4 sends MIDI on Channel 13 and allows to play approximately one octave on the M8 using buttons A t R.
