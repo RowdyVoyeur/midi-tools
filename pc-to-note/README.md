@@ -16,7 +16,7 @@ By default, the mapping is 1 to 1:
 If you're using the exact same setup comprised of M8 and MC-101, then you can use these settings:
 
 * M8's **SONGROW CUE CH** is set to `15`;
-* MC-101's **Ctrl Ch* (or MIDI Control Channel) is set to `13`.
+* MC-101's **Ctrl Ch** (or MIDI Control Channel) is set to `13`.
 
 If you need to change the MIDI channels, edit the following variables in `main.py`:
 
