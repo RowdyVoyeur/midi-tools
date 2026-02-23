@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This script converts MIDI Program Change (PC) messages into MIDI Note messages. It was specifically designed to allow a **Roland MC-101** to trigger the "Song Row Cue" on a **Dirtywave M8** tracker.
+This script converts MIDI Program Change (PC) messages into MIDI Note messages. It was specifically designed to allow a Roland MC-101 to trigger the "Song Row Cue" on the **Live Mode** (SEL+LEFT) of the Dirtywave M8 tracker.
 
 The script listens for Program Change messages (0-127) on a specific MIDI channel and translates them into MIDI Note On/Off messages (C-1 to G9) on a target MIDI channel.
 
@@ -16,6 +16,7 @@ By default, the mapping is 1 to 1:
 If you're using the exact same setup comprised of M8 and MC-101, then you can use these settings:
 
 * M8's **SONGROW CUE CH** is set to `15`;
+* M8's on **Live Mode**, i.e. `SEL+LEFT`;
 * MC-101's **Ctrl Ch** (or MIDI Control Channel) is set to `13`.
 
 If you need to change the MIDI channels, edit the following variables in `main.py`:
