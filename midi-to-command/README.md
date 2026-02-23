@@ -46,13 +46,13 @@ The command to execute when a matching MIDI message is received is specified wit
 
 Call the `midi2command.py` script with the name of a configuration file as the first argument:
 ```
-sudo python midi2command.py config.cfg
+sudo python3 midi2command.py config.cfg
 ```
 
 You can optionally specify the MIDI input port on which the script should listen for incoming messages with the `-p` option. Here's an example:
 
 ```
-sudo python midi2command.py config.cfg -p nanoKONTROL
+sudo python3 midi2command.py config.cfg -p nanoKONTROL
 ```
 
 The port may be specified as an integer or a (case-sensitive) substring of the port name. In the latter case either the first matching port is used, or, if no matching port is found, a list of available input ports is printed and the user is prompted to select one. 
