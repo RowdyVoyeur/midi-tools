@@ -41,11 +41,11 @@ Here's an example capturing `Control Change` 120 and converting it to `Pitch` 4 
 Call the `main.py` script, followed by `--config` and the name of a configuration file:
 
 ```
-sudo python main.py --config config.json
+sudo python3 main.py --config config.json
 ```
 Alternatively, you can also use `--debug` to see what is happening:
 ```
-sudo python main.py --config config.json --debug
+sudo python3 main.py --config config.json --debug
 ```
 
 ## Requirements
