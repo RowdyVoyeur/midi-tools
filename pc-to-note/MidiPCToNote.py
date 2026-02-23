@@ -2,9 +2,9 @@ import time
 import rtmidi
 from rtmidi.midiconstants import PROGRAM_CHANGE, NOTE_ON, NOTE_OFF
 
-# MIDI Configuration (0-indexed in Python)
-# MC-101 Source Channel: 13 (Index 12)
-# M8 Target Channel: 15 (Index 14)
+# MIDI configuration (0-indexed in Python)
+# MC-101 Source Channel: 13 (index 12)
+# M8 Target Channel: 15 (index 14)
 SOURCE_CHANNEL = 12
 TARGET_CHANNEL = 14
 
@@ -16,7 +16,7 @@ def main():
     in_ports = midi_in.get_ports()
     out_ports = midi_out.get_ports()
 
-    # Dynamic Port Discovery
+    # Dynamic port discovery
     mc101_idx = next((i for i, name in enumerate(in_ports) if "MC-101" in name), None)
     m8_idx = next((i for i, name in enumerate(out_ports) if "M8" in name), None)
 
@@ -41,7 +41,7 @@ def main():
         status = message[0] & 0xF0
         channel = message[0] & 0x0F
 
-        # Filter for Program Change on Channel 13
+        # Filter for Program Change on Source Channel
         if status == PROGRAM_CHANGE and channel == SOURCE_CHANNEL:
             pc_value = message[1]
           
