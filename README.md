@@ -34,9 +34,9 @@ This tool assumes you are using this [audio configuration](https://github.com/Ro
 
 ### PC To Note
 
-The [PC To Note](https://github.com/RowdyVoyeur/midi-tools/tree/main/pc-to-note) tool converts MIDI Program Change (PC) messages into MIDI Note messages. It was specifically designed to allow a Roland MC-101 to trigger the "Song Row Cue" on the Live Mode (SEL+LEFT) of the Dirtywave M8 tracker.
+The [PC To Note](https://github.com/RowdyVoyeur/midi-tools/tree/main/pc-to-note) tool converts MIDI PC messages into MIDI Note messages. It was specifically designed to allow a Roland MC-101 to trigger the "Song Row Cue" of the M8.
 
-This script listens for Program Change messages (0-127) on a specific MIDI channel and translates them into MIDI Note On/Off messages (C-1 to G9) on a target MIDI channel.
+This script listens for PC messages on a specific MIDI channel and translates them into MIDI Note On/Off messages on a target MIDI channel.
 
 ## Installation
 
