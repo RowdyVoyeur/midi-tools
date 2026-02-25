@@ -78,20 +78,22 @@ Scene 1 allows to individually Mute and/or Solo Tracks 1 to 8 of the M8 with the
 | [A] [C] ... [O] [Q] | Mute Tracks 1 to 8 | 12 to 19 | C0 to G0 | 16 |
 | [B] [D] ... [P] [R] | Solo Tracks 1 to 8 | 20 to 27 | G#0 to D#1 | 16 |
 
+The faders change the volume of Tracks 1 to 8 and the pots can be assigned to different parameters.
+
 ### M8 Control Map
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/6.jpg" width="500">
 
 Scene 2 allows pots and faders to send MIDI data on Channel 16 to control different M8 parameters.
 
-### M8 Song Row Queue
+### MIDI Channel 3
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/7.jpg" width="500">
 
-Scene 3 sends MIDI on Channel 14 and allows to queue song rows on the M8 using buttons A to R.
+Scene 3 sends MIDI data on Channel 3. Pots and faders can control specific parameters of MC-101. Buttons A to R allow to play the lowest octave on the M8.
 
-### M8 Chromatic Keyboard
+### MIDI Channel 4
 
 <img src="https://raw.githubusercontent.com/RowdyVoyeur/midi-tools/main/nanoKONTROL/images/8.jpg" width="500">
 
-Scene 4 sends MIDI on Channel 13 and allows to play approximately one octave on the M8 using buttons A t R.
+Scene 4 sends MIDI data on Channel 4. Pots and faders can control specific parameters of MC-101. Buttons A to R allow to play the lowest octave on the M8.
