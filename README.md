@@ -8,7 +8,9 @@ This is a set of MIDI tools to use with [M8C](https://github.com/RowdyVoyeur/m8c
 
 - Capture specific MIDI Note messages sent by the Korg nanoKONTROL and convert them into commands to change the audio routing between M8, MC-101, System Audio In and System Audio Out. If you have a [Pisound](https://blokas.io/pisound/docs/), this can also be achieved with this [script](https://github.com/RowdyVoyeur/midi-tools/blob/main/pisound-btn/audio_routing.sh), which uses the clicks on [The Button](https://blokas.io/pisound/docs/the-button/) to change the audio routing;
 
-- Capture specific MIDI Control Change (CC) messages sent by the Korg nanoKONTROL and use them to control the main output and main input volume levels of Alsamixer.
+- Capture specific MIDI Control Change (CC) messages sent by the Korg nanoKONTROL and use them to control the main output and main input volume levels of Alsamixer;
+
+- Capture MIDI Program Change (PC) messages sent by the MC-101 and convert them into MIDI Note messages received by the M8 to trigger the "Song Row Cue".
 
 While the second and third tasks can be useful for any setup, the first task is only useful if you have the original version of Korg nanoKONTROL. As far as I know, the following versions of this device can send MIDI Note messages from the transport buttons. Therefore, it is not necessary to convert MIDI CC to MIDI Notes.
 
@@ -29,6 +31,12 @@ The original version of this tool can be found in the [examples](https://github.
 The [Control Amixer](https://github.com/RowdyVoyeur/midi-tools/tree/main/control-amixer) tool uses `aseqdump`to capture MIDI Control Change (CC) messages and use the data to adjust two `amixer` simple mixer controls, namely `Speaker`and `Mic`, which are responsible for controlling the main output and main input volume levels of Alsamixer.
 
 This tool assumes you are using this [audio configuration](https://github.com/RowdyVoyeur/m8c-rpi4/blob/main/AUDIOGUIDE.md), but it can be easily modified for other setups.
+
+### PC To Note
+
+The [PC To Note](https://github.com/RowdyVoyeur/midi-tools/tree/main/pc-to-note) tool converts MIDI Program Change (PC) messages into MIDI Note messages. It was specifically designed to allow a Roland MC-101 to trigger the "Song Row Cue" on the Live Mode (SEL+LEFT) of the Dirtywave M8 tracker.
+
+This script listens for Program Change messages (0-127) on a specific MIDI channel and translates them into MIDI Note On/Off messages (C-1 to G9) on a target MIDI channel.
 
 ## Installation
 
